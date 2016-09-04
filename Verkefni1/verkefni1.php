@@ -8,21 +8,21 @@ echo 'þetta kostar margar $kronur <br>';
 
 //3. Hvað er $GLOBALS: Það er global variable sem heldur utan um öll önnur global variable sem þú getur þá notað hvar sem er í kóðanum
 
-$x = 75; 
+$x = 75;
 $y = 25;
- 
-function addition() { 
-    $GLOBALS['z'] = $GLOBALS['x'] + $GLOBALS['y']; 
+
+function addition() {
+    $GLOBALS['z'] = $GLOBALS['x'] + $GLOBALS['y'];
 }
- 
-addition(); 
+
+addition();
 echo "$z <br>";
 
 //4. Hvenær myndir þú nota === frekar en ==
 // === þýðir að hlutirnir séu nákvæmlega eins en == þýðir að þeir séu jafnir
 // "5" == 5 myndi skila true en "5" === 5 myndi skila false
 
-//5 printf() er sniðugt af tveim ástæðum hverar eru þær? 
+//5 printf() er sniðugt af tveim ástæðum hverar eru þær?
 // það er þæginlegar að nota til þess að formatta kóðann
 printf("ok %s, %s, ssss <br>",$kronur,$x);
 
@@ -46,7 +46,7 @@ echo "<br>";
 $colors = array("red", "blue", "green");
 list($a, $b, $c) = $colors;
 echo "<br> $a $b $c";
-	
+
 //10. Gefið er fylkið $states = array("Texas", "Ohio"); Bættu við aftast New York og bættu við fremst
 //california.
 $states = array("Texas", "Ohio");
@@ -59,4 +59,20 @@ shuffle($states);
 foreach($states as $state){
 echo "<br> $state";
 }
+
+//15. Hvar er http og hvað þýðir að það sé stateless
+// Stateless þýðir að serverinn þarf ekki að halda neinum upplýsingum fyrir hvern sem tengist þjóninum
+// svo útaf það er stateless þá endar tengingin á browsernum og servernum þegar þeir eru búnir að skipta á gögnum.
+
+//16. útskýrðu eftirfarandi URL útfrá protocls og domains. http://www.tskoli.is
+// http er protocol sem stendur fyrir "Hyper Text Transfer Protocol" protocolið er notað er notað til þess að hafa samskipti við
+// vefi og senda/taka á móti gögnum.
+// www.tskoli.is er sub-domain og tskoli er domain sem eru bæði einstök við þessa síðu
+// .is er top-level domain
+
+//17. Hvað er server-side scripting? Útskýrðu ferlið.
+// php er til dæmis server side scripting tækni og virkar þannig að
+// notandinn sendir request fyrir síðuna og scriptið er lesið af servernum áður en hann sendir það á notandann
+// scriptið breytir svo síðunni eða býr hana til eins og scriptan var skrifuð
+// eftir að serverinn er búinn að gera breytingarnar þá sendir hann síðuna á notandann.
 ?>
